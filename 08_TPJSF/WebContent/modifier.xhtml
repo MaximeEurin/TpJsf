@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+<title> </title>
+</h:head>
+
+<h:body>
+
+<h:form>
+<h:panelGrid columns="2">
+Id : <h:inputText value="#{userMB.id}"></h:inputText>
+Nom : <h:inputText value="#{userMB.nom}"></h:inputText>
+Prenom : <h:inputText value="#{userMB.prenom}"></h:inputText>
+Mail : <h:inputText value="#{userMB.mail}"> <f:validator validatorId="validatorPers"></f:validator> </h:inputText>
+Password : <h:inputText value="#{userMB.password}"></h:inputText>
+
+<h:commandButton value="Valider" action="#{userMB.modifier}"></h:commandButton>
+</h:panelGrid>
+</h:form>
+
+
+</h:body>
+</html>

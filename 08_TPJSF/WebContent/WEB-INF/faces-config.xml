@@ -4,5 +4,40 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
     version="2.2">
+    
+    
+    	<navigation-rule>
 
+		<!-- Depuis quelle page la navigation est lancée -->
+		<from-view-id>/index.xhtml</from-view-id>
+
+		<!-- Les cas de navigation -->
+		<navigation-case>
+			<!-- Toto est un alias pour la page 1 -->
+			<from-outcome>erreur</from-outcome>
+
+			<!-- Page correspondante à l'alias toto -->
+			<to-view-id>/erreur.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<!-- Titi est un alias pour la page 2 -->
+			<from-outcome>accueil</from-outcome>
+			<to-view-id>/accueil.xhtml</to-view-id>
+		</navigation-case>
+    	
+    	</navigation-rule>
+    	    	<navigation-rule>
+
+		<!-- Depuis quelle page la navigation est lancée -->
+		<from-view-id>*.xhtml</from-view-id>
+
+
+		<navigation-case>
+			<!-- Titi est un alias pour la page 2 -->
+			<from-outcome>accueil</from-outcome>
+			<to-view-id>/accueil.xhtml</to-view-id>
+		</navigation-case>
+    	
+    	</navigation-rule>
 </faces-config>
